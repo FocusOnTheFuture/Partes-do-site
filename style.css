@@ -1,200 +1,104 @@
-/* ======= RESET ======= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-/* ======= FUNDO ======= */
 body {
-  background: radial-gradient(ellipse at top, #0a0a12 0%, #000000 100%);
+  background: radial-gradient(circle at top left, #0a0a14, #050509 80%);
   color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ======= CABEÇALHO ======= */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1200px;
-  padding: 30px 0;
-}
-
-.logo {
-  height: 60px;
-}
-
-.home-link {
-  color: #4d8eff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-.home-link:hover {
-  color: #8fb3ff;
-}
-
-/* ======= SEÇÃO DE PLANOS ======= */
-main {
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-  padding-bottom: 50px;
-}
-
-/* ======= TOGGLE ======= */
-.toggle-container {
-  display: inline-flex;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  overflow: hidden;
-  margin: 30px 0 60px;
-  backdrop-filter: blur(10px);
-}
-
-.toggle-btn {
-  border: none;
-  background: transparent;
-  color: #aaa;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s;
-}
-
-.toggle-btn.active {
-  background: linear-gradient(90deg, #0056ff, #5c6cff);
-  color: #fff;
-}
-
-/* ======= CONTAINER DE PLANOS ======= */
-.planos {
+  font-family: 'Inter', sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  align-items: center;
+  gap: 24px;
+  padding: 40px;
 }
 
-/* ======= CARD DO PLANO ======= */
-.plano {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 35px;
-  width: 320px;
-  text-align: left;
-  position: relative;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(12px);
-  transition: all 0.4s ease;
+.card {
+  background: linear-gradient(145deg, #0d0d16, #090912);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  width: 380px;
+  min-height: 240px;
+  padding: 24px;
+  transition: 0.3s ease;
 }
 
-.plano:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 40px rgba(60, 90, 255, 0.4);
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* ======= ETIQUETA DE RECOMENDAÇÃO ======= */
-.recomendado {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: linear-gradient(90deg, #4d8eff, #7b6dff);
-  padding: 4px 10px;
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #b6b6c2;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  margin: 6px;
 }
 
-/* ======= TÍTULOS ======= */
-.plano h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #fff;
+.tag img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.descricao {
-  color: #b5b5b5;
+.tag .badge {
+  color: #ffcc33;
   font-size: 0.9rem;
-  margin: 10px 0 25px;
 }
 
-/* ======= PREÇO ======= */
-.preco {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 25px;
-  transition: all 0.3s ease;
+.graph {
+  background: rgba(255, 255, 255, 0.05);
+  height: 100px;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
-/* ======= BOTÃO ======= */
-.assinar {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  color: #fff;
-  background: linear-gradient(90deg, #003cff, #5c6cff);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 25px;
-  transition: all 0.3s;
-}
-
-.assinar:hover {
-  box-shadow: 0 0 20px rgba(60, 90, 255, 0.6);
-  transform: translateY(-2px);
-}
-
-/* ======= LISTA ======= */
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  position: relative;
-  padding-left: 25px;
+.section-title {
   color: #ccc;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #00d4ff;
-  font-weight: bold;
   font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
 }
 
-/* ======= DESTAQUE DO PLANO PRINCIPAL ======= */
-.destaque {
-  border: 1px solid rgba(0, 123, 255, 0.5);
-  background: rgba(15, 25, 70, 0.4);
-  transform: scale(1.05);
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1300px;
 }
 
-/* ======= ANIMAÇÃO DE TRANSIÇÃO ======= */
-.preco {
-  opacity: 1;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.checkbox-list {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.85rem;
 }
 
-.preco.fade {
-  opacity: 0;
-  transform: translateY(-10px);
+.checkbox-list label {
+  display: block;
+  margin: 6px 0;
+  color: #bcbcc9;
+}
+
+input[type="checkbox"] {
+  accent-color: #6d8cff;
 }
