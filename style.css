@@ -1,0 +1,200 @@
+/* ======= RESET ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* ======= FUNDO ======= */
+body {
+  background: radial-gradient(ellipse at top, #0a0a12 0%, #000000 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ======= CABEÇALHO ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px 0;
+}
+
+.logo {
+  height: 60px;
+}
+
+.home-link {
+  color: #4d8eff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.home-link:hover {
+  color: #8fb3ff;
+}
+
+/* ======= SEÇÃO DE PLANOS ======= */
+main {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* ======= TOGGLE ======= */
+.toggle-container {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 30px 0 60px;
+  backdrop-filter: blur(10px);
+}
+
+.toggle-btn {
+  border: none;
+  background: transparent;
+  color: #aaa;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(90deg, #0056ff, #5c6cff);
+  color: #fff;
+}
+
+/* ======= CONTAINER DE PLANOS ======= */
+.planos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ======= CARD DO PLANO ======= */
+.plano {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 35px;
+  width: 320px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+}
+
+.plano:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(60, 90, 255, 0.4);
+}
+
+/* ======= ETIQUETA DE RECOMENDAÇÃO ======= */
+.recomendado {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(90deg, #4d8eff, #7b6dff);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ======= TÍTULOS ======= */
+.plano h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.descricao {
+  color: #b5b5b5;
+  font-size: 0.9rem;
+  margin: 10px 0 25px;
+}
+
+/* ======= PREÇO ======= */
+.preco {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+/* ======= BOTÃO ======= */
+.assinar {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg, #003cff, #5c6cff);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 25px;
+  transition: all 0.3s;
+}
+
+.assinar:hover {
+  box-shadow: 0 0 20px rgba(60, 90, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ======= LISTA ======= */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 25px;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00d4ff;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+/* ======= DESTAQUE DO PLANO PRINCIPAL ======= */
+.destaque {
+  border: 1px solid rgba(0, 123, 255, 0.5);
+  background: rgba(15, 25, 70, 0.4);
+  transform: scale(1.05);
+}
+
+/* ======= ANIMAÇÃO DE TRANSIÇÃO ======= */
+.preco {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.preco.fade {
+  opacity: 0;
+  transform: translateY(-10px);
+}
